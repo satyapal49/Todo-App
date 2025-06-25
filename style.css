@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none
+    
+}
+
+.box {
+    height: 50%;
+    width: 50%;
+    background-color: lightblue;
+    border-radius: 5px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    color: white;
+    padding: 10px;
+    margin: auto;
+   
+}
+
