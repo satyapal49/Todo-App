@@ -3,30 +3,22 @@ let btn = document.querySelector("button");
 let ul = document.querySelector("ul");
 
 // Event listener for input field
-btn.addEventListener("click", function(event) {
-    event.stopPropagation();
-    let li = document.createElement("li");
-    li.innerText = inp.value;
+btn.addEventListener("click", function () {
+    let item = document.createElement("li");
+    item.innerText = inp.value;
 
-    let dltBtn = document.createElement("button");
-    dltBtn.innerText = "Delete";
-    dltBtn.classList.add("delete");
-    
+    let delBtn = document.createElement("button");
+    delBtn.innerText = "Delete";
+    delBtn.classList.add("delete");
 
-    li.appendChild(dltBtn);
-    ul.appendChild(li);
+
+    item.appendChild(delBtn);
+    ul.appendChild(item);
     inp.value = "";
-
-let delbtns = document.querySelectorAll(".delete");
-for (del of delbtns) {
-    del.addEventListener("click", function(event) {
-        event.stopPropagation();
-        let par = this.parentElement;
-        par.remove();
-        console.log("Delete button clicked");
     });
+
+ul.addEventListener("click", function (event) {
+    if (event.target.nodeName == "BUTTON") {
+        event.target.parentElement.remove();
     }
-
-
 });
-
